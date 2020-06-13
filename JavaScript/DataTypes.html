@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<h4>JavaScript evaluates expressions from left to right. Different sequences can produce different results:</h4>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+
+<h4>Extra large or extra small numbers can be written with scientific (exponential) notation:</h4>
+<p id="demo3"></p>
+
+<h4>First element of a JS-declared array below:</h4>
+<p id="demo4"></p>
+
+<h4>JavaScript Objects</h4>
+<p id="demo5"></p>
+
+<h4>The typeof operator returns the type of a variable or an expression.</h4>
+<p id="demo6"></p>
+
+<script>
+var x = 16 + 4 + "Volvo";
+document.getElementById("demo").innerHTML = x;
+
+var x = "Volvo" + 16 + 4;
+document.getElementById("demo2").innerHTML = x;
+
+var y = 123e5;
+var z = 123e-5;
+document.getElementById("demo3").innerHTML =
+y + "<br>" + z;
+
+var cars = ["Saab","Volvo","BMW"];
+document.getElementById("demo4").innerHTML = cars[0];
+
+var person = {
+  firstName : "John",
+  lastName  : "Doe",
+  age     : 50,
+  eyeColor  : "blue"
+};
+
+document.getElementById("demo5").innerHTML =
+person.firstName + " " + person.lastName + " is " + person.age + " years old.";
+
+var car; // Value is undefined, type is undefined
+var person_emp = null; // Value is null, type is object
+
+document.getElementById("demo6").innerHTML =
+typeof 0 + "<br>" + // number
+typeof 3.14 + "<br>" + // number
+typeof "Hello" + "<br>" + // string
+typeof car + "<br>" + // undefined
+typeof person_emp + "<br>" + // object
+(car == person_emp) + "<br>" + // true
+(car === person_emp) + "<br>" + // false
+typeof cars + "<br>" + // object
+typeof person; // object
+</script>
+
+<!-- JavaScript variables are not type constrained and can hold any value at any time -->
+<!-- JavaScript has four primitive types: string, number, boolean, and undefined
+      and two complex types: function and object -->
+
+</body>
+</html>

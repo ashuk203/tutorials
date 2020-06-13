@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Regular Expressions</h2>
+
+    <p>
+      Search a string for "w3Schools", and display the position of the match:
+    </p>
+
+    <p id="demo"></p>
+    <p id="demo3"></p>
+
+    <p>Click the button to do a global search for "is" in a string.</p>
+    <p id="demo2"></p>
+
+    <script>
+      var str = "Visit W3Schools!";
+      var n = str.search(/w3Schools/i); //case insensitive regexp
+      var n2 = str.search("oo[a-z]*");
+
+      var str = "Is this all there is?";
+      var patt1 = /is/g;
+      var result = str.match(patt1);
+      document.getElementById("demo2").innerHTML = result;
+
+      document.getElementById("demo").innerHTML = n;
+      document.getElementById("demo3").innerHTML = n2;
+    </script>
+  </body>
+</html>

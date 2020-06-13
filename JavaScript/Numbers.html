@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Numbers</h2>
+
+<p>NaN when trying to perform numeric operations on non-numeric types
+  The typeof NaN is number:</p>
+<p id="demo"></p>
+
+<p>However, this is different from the (-)Infinity value
+  (which is also of type number)</p>
+<p id="demo2"></p>
+
+
+<p>For all numeric operators except +, JavaScript will try to convert strings to numbers
+  if they can be converted</p>
+<p id="demo3"></p>
+
+<p>The toFixed(numDecimals) method rounds a number to a given number of digits.</p>
+<p id="demo4"></p>
+
+<script>
+var x = (100 / "Apple") + 8; // Number.NaN
+document.getElementById("demo").innerHTML = typeof x;
+
+var x = 2 / 0; // Number.POSITIVE_INFINITY
+var y = -2 / 0; // Number.NEGATIVE_INFINITY
+document.getElementById("demo2").innerHTML = x + "<br>" + y;
+
+document.getElementById("demo3").innerHTML = ("10" * "100") + " " + ("100" - 10);
+
+var x = 9.656;
+document.getElementById("demo4").innerHTML =
+  x.toFixed(0) + "<br>" +
+  x.toFixed(2) + "<br>" +
+  x.toFixed(4) + "<br>" +
+  x.toFixed(6);
+</script>
+
+</body>
+</html>

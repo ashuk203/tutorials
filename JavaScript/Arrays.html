@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<p>The best way to loop through an array is using a standard for loop:</p>
+<p id="demo"></p>
+
+<p>The join() method joins array elements (based on a delimiter) into a string.</p>
+<p id="demo2"></p>
+
+<p>The concat() method is used to merge any number of arrays:</p>
+<p id="demo3"></p>
+
+<p>Slice works just like in python arrays</p>
+<p id="demo4"></p>
+
+
+<script>
+var fruits, text, fLen, i;
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+// Append element at the end
+fruits.push("Lemon");
+
+// You can add elements out of bounds (creates undefined values in between)
+fruits[6] = "Tomato";
+var popped = fruits.pop();  // removes last element
+var removed = fruits.shift(); // removes first element
+fruits.unshift("Banana"); // Add element to the beginning
+delete fruits[0]; // first element is undefined
+
+// start position, number to remove starting at that position, elements to be added
+var returned = fruits.splice(0, 1, "Pineapple", "Custard Apple");
+console.log(returned); // Array of removed items ([undefined])
+
+text = "<ul>";
+for (i = 0; i < fruits.length; i++) {
+  text += "<li>" + fruits[i] + "</li>";
+}
+text += "</ul>";
+
+document.getElementById("demo").innerHTML = text;
+document.getElementById("demo2").innerHTML = fruits.join(" * ");
+
+console.log(fruits instanceof Array); // true
+
+var arr1 = ["Cecilie", "Lone"];
+var arr2 = ["Emil", "Tobias", "Linus"];
+var myChildren = arr1.concat(arr2, ["Robin", "Morgan"]);
+
+document.getElementById("demo3").innerHTML = myChildren;
+
+var subset = myChildren.slice(1,3);
+document.getElementById("demo4").innerHTML = subset;
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript String Properties</h2>
+    <p>The length property returns the length of a string:</p>
+    <p id="demo"></p>
+
+    <h2>Never Create Strings as objects.</h2>
+    <p>JavaScript objects cannot be compared.</p>
+    <p id="demo2"></p>
+
+    <p>
+      But if one has just the value, they can be with == (but === will be false
+      since one is a primitive and the other an object).
+    </p>
+    <p id="demo4"></p>
+
+    <h2>JavaScript String Methods</h2>
+    <p>
+      The indexOf() and lastIndexOf() method return the position of the first
+      and the last occurrence of a string.
+    </p>
+    <p id="demo3"></p>
+
+    <script>
+      var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      document.getElementById("demo").innerHTML = txt.length;
+
+      var x = new String("John"); // x is an object
+      var y = new String("John"); // y is an object
+      var z = "John";
+      document.getElementById("demo2").innerHTML = (x == y) + " " + (x === y);
+      document.getElementById("demo4").innerHTML = (x == z) + " " + (x === z);
+
+      var str = "Please locate where 'locate' occurs!";
+      var pos = str.indexOf("locate"); // Both methods can take a second parameter of start index
+      var pos2 = str.lastIndexOf("locatgit e");
+      var pos3 = str.lastIndexOf("non existent akjnfakjsdnfasd");
+      document.getElementById("demo3").innerHTML =
+        pos + " " + pos2 + " " + pos3;
+    </script>
+  </body>
+</html>

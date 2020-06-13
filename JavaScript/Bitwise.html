@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Bitwise Operators</h2>
+
+    <p>How is the tilde operator interpreted?</p>
+
+    <p id="demo1"></p>
+
+    <script>
+      const c = 1;
+      let message = "No change";
+
+      if (~c) {
+        message = "Ooooooh~";
+      }
+      document.getElementById("demo1").innerHTML = message;
+    </script>
+  </body>
+</html>

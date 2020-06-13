@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <!-- An event is something that happens to an HTML event that
+  JavaScript code can react to and is declared as follows:
+  <element event="some JavaScript">
+  onclick is an example of an event.
+-->
+    <p id="demo"></p>
+    <button onclick="displayDate()">The time is?</button>
+    <br />
+    <p>Display date on the button</p>
+    <button onclick="this.innerHTML = Date()">The time is?</button>
+
+    <!-- Some common HTML events:
+  onchange, onclick, onmouseover, onmouseout, onkeydown, onload -->
+
+    <script>
+      function displayDate() {
+        document.getElementById("demo").innerHTML = Date();
+      }
+    </script>
+  </body>
+</html>

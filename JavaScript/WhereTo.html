@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script>
+function myFunctionH() {
+  document.getElementById("demo").innerHTML = "Paragraph changed head.";
+}
+</script>
+</head>
+
+<body>
+
+<h1>A Web Page</h1>
+<p id="demo">A Paragraph</p>
+<button type="button" onclick="myFunctionH()">Try it</button>
+
+<h2>JavaScript in Body</h2>
+<button type="button" onclick="myFunctionB()">Try it pt 2</button>
+
+<p>Function is stored in an external file called "myScript.js"</p>
+<button type="button" onclick="myFunctionEx()">Try it anew</button>
+
+<p>Function is stored on tne web</p>
+<button type="button" onclick="myFunction()">Website Script</button>
+
+<script>
+document.getElementById("demo").innerHTML = "My First JavaScript";
+
+function myFunctionB() {
+ document.getElementById("demo").innerHTML = "Paragraph changed body.";
+}
+</script>
+<script src="myFirstScript.js"></script>
+<!-- URL can be relative if in current webpage -->
+<script src="https://www.w3schools.com/js/myScript.js"></script>
+
+
+</body>
+</html>
