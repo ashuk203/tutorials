@@ -1,9 +1,11 @@
+// This a line testing how changes are handled in git submodules
+
 const VisibilityFilters = {
-  SHOW_ALL: 'test value',
-  SHOW_COMPLETED: 'SHOW_COMPLETED',
-  SHOW_ACTIVE: 'SHOW_ACTIVE'
-}
+  SHOW_ALL: "test value",
+  SHOW_COMPLETED: "SHOW_COMPLETED",
+  SHOW_ACTIVE: "SHOW_ACTIVE",
+};
 
-const { SHOW_ALL } = VisibilityFilters
+const { SHOW_ACTIVE } = VisibilityFilters;
 
-console.log(SHOW_ALL);
+console.log(SHOW_ACTIVE);
